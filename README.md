@@ -14,3 +14,9 @@ This repository contains a script to create EBS snapshots for point-in-time back
 ```bash
 git clone https://github.com/kd9s0/ebs-snapshot-backup.git
 cd ebs-snapshot-backup
+```
+
+2. Make create_snapshot.sh executable:
+```
+chmod +x create_snapshot.sh
+```
