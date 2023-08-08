@@ -35,3 +35,9 @@ log_event() {
     local event="$1"
     echo "$(date +'%Y-%m-%d %H:%M:%S') - $event" >> "$log_file"
 }
+
+# main execution script
+if [[ -z "$volume_id" || "$volume_id" == "your_ebs_volume_id_here" ]]; then
+    echo "ERROR: Please replace 'your_ebs_volume_id_here' with your actual EBS volume ID."
+    exit 1
+fi
