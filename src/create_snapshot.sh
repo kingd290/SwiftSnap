@@ -41,3 +41,18 @@ if [[ -z "$volume_id" || "$volume_id" == "your_ebs_volume_id_here" ]]; then
     echo "ERROR: Please replace 'your_ebs_volume_id_here' with your actual EBS volume ID."
     exit 1
 fi
+
+# check if AWS CLI is installed
+if ! command -v aws &> /dev/null; then
+    echo "ERROR: AWS CLI is not installed. Please install it and configure with appropriate IAM credentials."
+    exit 1
+fi
+
+# create EBS snapshot
+create_ebs_snapshot "$volume_id" "$snapshot_description"
+
+# clean old snapshots
+cleanup_snapshots "$volume_id"
+
+# log event
+log_event "EBS snapshot created and old snapshots cleaned up."
