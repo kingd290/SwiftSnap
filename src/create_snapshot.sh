@@ -30,3 +30,8 @@ cleanup_snapshots() {
         echo "No old snapshots found."
     fi
 }
+
+log_event() {
+    local event="$1"
+    echo "$(date +'%Y-%m-%d %H:%M:%S') - $event" >> "$log_file"
+}
