@@ -20,3 +20,8 @@ cd ebs-snapshot-backup
 ```
 chmod +x create_snapshot.sh
 ```
+
+3. Run the script to create an EBS snapshot:
+```
+./create_snapshot.sh
+```
