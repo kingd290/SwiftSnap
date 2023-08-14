@@ -10,6 +10,7 @@ This repository contains a script to create EBS snapshots for point-in-time back
 ## Features
 
 - Creates an EBS snapshot with a timestamp-based description.
+- Creates snapshot of Multiple EBS Volumes
 - Retains only the latest N snapshots (controlled by `num_snapshots_to_retain` in the script).
 - Logs events to a file (`snapshot_log.txt`).
 
