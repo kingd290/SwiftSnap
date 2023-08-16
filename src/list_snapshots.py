@@ -62,6 +62,6 @@ def list_snapshots(min_age_days=None, tag_key=None, tag_value=None):
         print("\n")
 
 if __name__ == "__main__":
-    # Example usage:
+    
     # list_snapshots(min_age_days=7, tag_key="Environment", tag_value="Production")
     list_snapshots(min_age_days=None, tag_key=None, tag_value=None)
