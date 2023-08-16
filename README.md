@@ -1,6 +1,6 @@
 # EBS Snapshot Backup
 
-This repository contains a script to create EBS snapshots for point-in-time backups.
+This repository contains a bash script to create EBS snapshots for point-in-time backups. There is an independent python script that uses the AWS Boto3 library to retrieve information about EBS snapshots, including their tags and other metadata. This script will allow you to query and display details about your snapshots
 
 ## Requirements
 
