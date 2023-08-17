@@ -34,12 +34,22 @@ git clone https://github.com/kd9s0/ebs-snapshot-backup.git
 cd ebs-snapshot-backup
 ```
 
-2. Make create_snapshot.sh executable:
+2. Run the following command in your command-line terminal to install the packages listed in the `requirements.txt` file:
+```
+pip install -r requirements.txt
+```
+
+3. Make create_snapshot.sh executable:
 ```
 chmod +x create_snapshot.sh
 ```
 
-3. Run the script to create an EBS snapshot:
+4. Run the script to create an EBS snapshot:
 ```
 ./create_snapshot.sh
+```
+
+5. Query information about EBS snapshot by run command:
+```
+python list_snapshots.py
 ```
