@@ -2,6 +2,12 @@
 
 This repository contains a bash script to create EBS snapshots for point-in-time backups. There is an independent python script that uses the AWS Boto3 library to retrieve information about EBS snapshots, including their tags and other metadata. This script will allow you to query and display details about your snapshots
 
+The `list_snapshots` function in the python script accepts three optional parameters:
+
+- `min_age_days`: Filters snapshots based on their age in days
+- `tag_key`: Filters snapshots based on a specific tag key
+- `tag_value`: Filters snapshots based on a specific tag value
+
 ## Requirements
 
 - AWS CLI installed and configured with appropriate IAM credentials.
