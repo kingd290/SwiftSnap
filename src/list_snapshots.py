@@ -24,7 +24,7 @@ def list_snapshots(min_age_days=None, tag_key=None, tag_value=None):
         start_time = snapshot["StartTime"].strftime("%Y-%m-%d %H:%M:%S")
         state = snapshot["State"]
         description = snapshot["Description"]
-        creation_date = snapshot["StartTime"]
+        creation_date = snapshot["StartTime"],
 
         # Check if the snapshot meets the age criteria
         if min_creation_date and creation_date < min_creation_date:
