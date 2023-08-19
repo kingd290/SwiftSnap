@@ -10,7 +10,7 @@ def list_snapshots(min_age_days=None, tag_key=None, tag_value=None):
 
     # Calculate the minimum creation date based on the specified age
     if min_age_days:
-        min_creation_date = datetime.utcnow() = timedelta(days=min_age_days)
+        min_creation_date = datetime.utcnow() - timedelta(days=min_age_days)
     else:
         min_creation_date = None
 
