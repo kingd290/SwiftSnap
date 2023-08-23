@@ -70,6 +70,11 @@ def delete_snapshots_by_age(max_age_days):
     for snapshot in response["Snapshots"]:
         snapshot_id = snapshot["SnapshotId"]
         creation_date = snapshot["StartTime"]
+        
+    if creation_date < max_creation_date:
+            print(f"Deleting snapshot {snapshot_id} created on {creation_date}")
+            ec2_client.delete_snapshot(SnapshotId=snapshot_id)
+            print("Snapshot deleted.\n")    
     
 
 if __name__ == "__main__":
