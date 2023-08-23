@@ -67,6 +67,10 @@ def delete_snapshots_by_age(max_age_days):
     max_creation_date = datetime.utcnow() - timedelta(days=max_age_days)
     response = ec2_client.describe_snapshots(OwnerIds=["self"])
     
+    for snapshot in response["Snapshots"]:
+        snapshot_id = snapshot["SnapshotId"]
+        creation_date = snapshot["StartTime"]
+    
 
 if __name__ == "__main__":
     
