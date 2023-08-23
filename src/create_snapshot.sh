@@ -45,9 +45,8 @@ for volume_id in "${!volume_map[@]}"; do
     snapshot_id=$(create_ebs_snapshot "$volume_id" "$folder_name")
 
     tag_snapshot "$snapshot_id" "$folder_name"
-
     echo "$(date +'%Y-%m-%d %H:%M:%S') - EBS snapshot created: $snapshot_id" >> "$log_file"
-    
+
 done
 
 notification_subject="EBS Snapshots Created"
