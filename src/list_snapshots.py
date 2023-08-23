@@ -74,7 +74,15 @@ def delete_snapshots_by_age(max_age_days):
     if creation_date < max_creation_date:
             print(f"Deleting snapshot {snapshot_id} created on {creation_date}")
             ec2_client.delete_snapshot(SnapshotId=snapshot_id)
-            print("Snapshot deleted.\n")    
+            print("Snapshot deleted.\n")
+            
+def copy_snapshots_to_region(source_region, destination_region):
+    print("Copying Snapshots to Another Region:\n")
+    
+    source_ec2_client = boto3.client("ec2", region_name=source_region)
+    source_response = source_ec2_client.describe_snapshots(OwnerIds=["self"])
+    
+               
     
 
 if __name__ == "__main__":
