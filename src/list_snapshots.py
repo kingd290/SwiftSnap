@@ -82,6 +82,9 @@ def copy_snapshots_to_region(source_region, destination_region):
     source_ec2_client = boto3.client("ec2", region_name=source_region)
     source_response = source_ec2_client.describe_snapshots(OwnerIds=["self"])
     
+    for snapshot in source_response["Snapshots"]:
+        snapshot_id = snapshot["SnapshotId"]
+        print(f"Copying snapshot {snapshot_id} from {source_region} to {destination_region}")
                
     
 
