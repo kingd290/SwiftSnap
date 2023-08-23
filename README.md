@@ -15,7 +15,7 @@ The `list_snapshots` function in the python script accepts three optional parame
 
 ## Features
 
-- Creates an EBS snapshot with a timestamp-based description.
+- Creates an EBS snapshot with a timestamp-based descriaa   0 .
 - Creates snapshot of Multiple EBS Volumes
 - Retains only the latest N snapshots (controlled by `num_snapshots_to_retain` in the script).
 - Logs events to a file (`snapshot_log.txt`).

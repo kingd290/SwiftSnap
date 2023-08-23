@@ -60,6 +60,10 @@ def list_snapshots(min_age_days=None, tag_key=None, tag_value=None):
                 print(f"  {key}: {value}")
         
         print("\n")
+        
+def delete_snapshots_by_age(max_age_days):
+    print("Deleting Snapshots by Age:\n")
+    
 
 if __name__ == "__main__":
     
