@@ -64,6 +64,8 @@ def list_snapshots(min_age_days=None, tag_key=None, tag_value=None):
 def delete_snapshots_by_age(max_age_days):
     print("Deleting Snapshots by Age:\n")
     
+    max_creation_date = datetime.utcnow() - timedelta(days=max_age_days)
+    
 
 if __name__ == "__main__":
     
