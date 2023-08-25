@@ -20,6 +20,10 @@ The `list_snapshots` function in the python script accepts three optional parame
 - Retains only the latest N snapshots (controlled by `num_snapshots_to_retain` in the script).
 - Logs events to a file (`snapshot_log.txt`).
 
+### New features added to `list_snapshots.py`
+- Deleting Snapshots: We'll add a function that allows you to delete snapshots based on certain criteria, such as age or specific tags.
+- Copying Snapshots: We'll add a function that enables you to copy snapshots to another AWS region, helping with cross-region disaster recovery.
+
 **new**
 - Tagging the snapshots with useful metadata
 - Send notifications via email after snapshot creation

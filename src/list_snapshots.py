@@ -91,8 +91,6 @@ def copy_snapshots_to_region(source_region, destination_region):
         
         new_snapshot_id = copy_response["SnapshotId"]
         print(f"Snapshot copied to {destination_region} with ID: {new_snapshot_id}\n")
-        
-        
 
 if __name__ == "__main__":
     
