@@ -90,7 +90,7 @@ def copy_snapshots_to_region(source_region, destination_region):
         copy_response = destination_ec2_client.copy_snapshot(SourceRegion=source_region, SourceSnapshotId=snapshot_id)
         
         new_snapshot_id = copy_response["SnapshotId"]
-        print(f"Snapshot copied to {destination_region} with ID: {new_snapshot_id}\n")
+        105102
 
 if __name__ == "__main__":
     
