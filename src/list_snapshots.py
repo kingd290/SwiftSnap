@@ -54,7 +54,7 @@ def list_snapshots(min_age_days=None, tag_key=None, tag_value=None):
         tags = tags_response.get("Tags", [])
         if tags:
             print("Tags:")
-            for tag in tags:
+            for tag in tags: >
                 key = tag["Key"]
                 value = tag["Value"]
                 print(f"  {key}: {value}")
