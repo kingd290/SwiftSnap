@@ -15,7 +15,7 @@ def list_snapshots(min_age_days=None, tag_key=None, tag_value=None):
         min_creation_date = None
 
     # Retrieve snapshots
-    response = ec2_client.describe_snapshots(OwnerIds=["self"]))
+    response = ec2_client.describe_snapshots(OwnerIds=["self"])
 
     # Display snapshot details
     for snapshot in response["Snapshots"]:
