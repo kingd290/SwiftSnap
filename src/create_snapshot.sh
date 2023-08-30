@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 +
 declare -A volume_map
-volume_map["vol-1"]="Folder1"
-volume_map["vol-2"]="Folder2"
+volume_map["vol-0b235e5983aae1aef"]="Folder1"
+volume_map["vol-050ec02d0a7d2288b"]="Folder2"
 
 log_file="snapshot_log.txt"
 notification_email="bagsy9000@gmail.com"
 aws_region="us-east-1"
-kms_key_id="your_kms_key_id_here"
+kms_key_id="d4fa513c-897b-4358-93de-659785cbf41f"
 
 create_ebs_snapshot() {
     local volume_id="$1"
