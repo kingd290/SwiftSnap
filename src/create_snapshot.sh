@@ -1,11 +1,11 @@
-#!/bin/bash
+#!/usr/bin/env bash
 +
 declare -A volume_map
 volume_map["vol-1"]="Folder1"
 volume_map["vol-2"]="Folder2"
 
 log_file="snapshot_log.txt"
-notification_email="your_email@example.com"
+notification_email="bagsy9000@gmail.com"
 aws_region="us-east-1"
 kms_key_id="your_kms_key_id_here"
 
