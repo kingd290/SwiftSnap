@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-+
+
 declare -A volume_map
 volume_map["vol-0b235e5983aae1aef"]="Folder1"
 volume_map["vol-050ec02d0a7d2288b"]="Folder2"
@@ -15,7 +15,7 @@ create_ebs_snapshot() {
     local snapshot_description="Snapshot of $volume_id in $folder_name on $(date +'%Y-%m-%d %H:%M:%S')"
     
     echo "Creating EBS snapshot for volume $volume_id..."
-    aws ec2 create-snapshot --volume-id "$volume_id" --description "$snapshot_description" --region "$aws_region" --kms-key-id "$kms_key_id"
+    aws ec2 create-snapshot --volume-id "$volume_id" --description "$snapshot_description" --region "$aws_region" --encrypted --kms-key-id "$kms_key_id"
 }
 
 # Function to tag the snapshot
