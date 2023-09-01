@@ -94,6 +94,5 @@ def copy_snapshots_to_region(source_region, destination_region):
 
 if __name__ == "__main__":
     
-    # Call the delete_snapshots_by_age function with a max_age_days value of 30 days.
     delete_snapshots_by_age(max_age_days=30)
 
