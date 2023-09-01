@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 declare -A volume_map
-volume_map["vol-0b235e5983aae1aef"]="Folder1"
-volume_map["vol-050ec02d0a7d2288b"]="Folder2"
+volume_map["vol-0b235e5983aae1aef"]="Project1"
+volume_map["vol-050ec02d0a7d2288b"]="Project2"
 
 log_file="snapshot_log.txt"
 notification_email="bagsy9000@gmail.com"
