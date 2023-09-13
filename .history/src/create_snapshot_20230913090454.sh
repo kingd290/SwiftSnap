@@ -17,7 +17,12 @@ rotate_logs() {
     local log_max_files="$3"
 
     if [ -e "$log_file" ] && [ "$(du -m "$log_file" | cut -f1)" -gt "$log_max_size" ]; then
-        
+        mv "$log_file" "${log_file}.1"
+        for ((i=log_max_files; i>1; i--)); do
+            if [ -e "${log_file}.$(($i-1))" ]; then
+                mv "${log_file}.$(($i-1))" "${log_file}.$i"
+            fi
+        done
     fi
 
 }
