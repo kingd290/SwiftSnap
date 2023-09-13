@@ -5,8 +5,8 @@ volume_map["vol-0b235e5983aae1aef"]="Project1"
 volume_map["vol-050ec02d0a7d2288b"]="Project2"
 
 log_file="snapshot_log.txt"
-log_max_size_mb=10  # Maximum log file size in megabytes
-log_max_files=5    # Maximum number of log files to retain
+log_max_size_mb=10  # Max log file size in megabytes
+log_max_files=5    # Max number of log files to retain
 notification_email="bagsy9000@gmail.com"
 aws_region="us-east-1"
 
