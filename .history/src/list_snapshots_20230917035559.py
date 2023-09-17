@@ -69,8 +69,7 @@ def list_snapshots(min_age_days=None, tag_key=None, tag_value=None):
             print("\n")
     except Exception as e: 
         logging.error(f"Error listing snapshots: {str(e)}")  
-
-              # try except
+              
     
         
 def delete_snapshots_by_age(max_age_days):
