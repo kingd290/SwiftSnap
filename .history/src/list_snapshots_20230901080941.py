@@ -1,9 +1,5 @@
 import boto3
-import logging
 from datetime import datetime, timedelta
-
-logging.basicConfig(filename='snapshot_manager.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-
 
 aws_region = "us-east-1"
 
